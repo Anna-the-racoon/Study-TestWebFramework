@@ -1,0 +1,17 @@
+﻿@model TestWeb.Models.Security
+
+@{
+    ViewBag.Title = "Result";
+
+}
+<form>
+    <h3>You input: </h3>
+    <div class="mb-3">
+        <label class="form-label">Login</label> 
+        <input type="text" class="form-control" name="Login" value="@Html.DisplayFor(p=>p.Login)" readonly>
+    </div>
+    <div>
+        <label class="form-label">Password</label>
+        <input type="text" class="form-control" name="Login" value="@Html.DisplayFor(p=>p.Password)" readonly>
+    </div>
+</form>
