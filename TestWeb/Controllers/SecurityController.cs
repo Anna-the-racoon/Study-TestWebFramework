@@ -25,5 +25,14 @@ namespace TestWeb.Controllers
 
             return View("Result", security); 
         }
+
+
+        [HttpPost]
+        [ActionName("Submit")]
+        public ActionResult Result()
+        {
+            return View("Result", new Security() { Login = "1", Password = "10" }) ;
+        }
+
     }
 }

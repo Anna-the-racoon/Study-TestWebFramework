@@ -15,7 +15,7 @@ namespace TestWeb.Models
         
         [DisplayName("Password")]
         [Required(ErrorMessage = "Не указан пароль")]
-        [StringLength(1000, MinimumLength =2, ErrorMessage = "Длина пароля не может быть меньше 3 символов")]
+        [StringLength(1000, MinimumLength =3, ErrorMessage = "Длина пароля не может быть меньше 3 символов")]
         public string Password { get; set; }
     }
 }
