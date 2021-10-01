@@ -13,30 +13,17 @@ namespace TestWeb.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new Security());
-        }
-
-        [HttpPost]
-        public ActionResult Index(string login, string password)
-        {
-            //if (login.Length == 0 && password.Length == 0) return HttpNotFound(); ;
-
             return View();
         }
 
         [HttpPost]
-        public ActionResult Index(Security view)
+        public ActionResult Index(string Login, string Password)
         {
+            var security = new Security() 
+            { Login = Login,
+              Password = Password };
 
-            //if (view.Login.Length == 0 && view.Password.Length == 0) return HttpNotFound(); ;
-
-            return View(view);
-        }
-
-        [HttpGet]
-        public ActionResult Result(Security view)
-        {
-            return View(view);
+            return View("Result", security); 
         }
     }
 }

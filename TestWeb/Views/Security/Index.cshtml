@@ -1,23 +1,15 @@
-﻿@model TestWeb.Models.Security
+﻿@{Html.BeginForm();}
+<h3>Input you login and password</h3>
+<fieldset>
+    <div class="mb-3">
 
-@{
-    ViewBag.Title = "Index";
-}
-<form>
-    <h3>Input you login and password</h3>
-    <fieldset>
-        <div class="mb-3">
-
-            <label class="form-label">Login</label>
-            <input type="text" class="form-control" name="Login" asp-route-id="@Model.Login"/>
-            @*@Html.EditorFor(p => p.Login)*@
-        </div>
-        <div>
-            @*@Html.LabelFor(p => p.Password)
-            @Html.EditorFor(p => p.Password)*@
-            <label class="form-label">Password</label>
-            <input type="password" class="form-control" name="Password" asp-route-id="@Model.Password">
-        </div>
-        <button type="submit" class="btn btn-primary" PostBackUrl="Result.cshtml">Submit</button>
-    </fieldset>
-</form>
+        <label class="form-label">Login</label>
+        <input type="text" class="form-control" name="Login" id="Login" />
+    </div>
+    <div>
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" name="Password" id="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</fieldset>
+@{Html.EndForm();}
