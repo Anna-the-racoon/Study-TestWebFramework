@@ -19,6 +19,8 @@ namespace TestWeb.Controllers
         [HttpPost]
         public ActionResult Index(string Login, string Password)
         {
+            if (!ModelState.IsValid) return View("Index");
+
             var security = new Security() 
             { Login = Login,
               Password = Password };

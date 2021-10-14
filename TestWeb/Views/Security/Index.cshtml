@@ -3,19 +3,25 @@
 
 @using (Html.BeginForm("Index", "Security", FormMethod.Post))
 {
+    @Html.ValidationSummary()
+
     <h3> Input you login and password</h3>
     <fieldset>
-        <div class="mb-3">
+        <div class="mb-3, editor-field">
             @Html.LabelFor(p => p.Login)
             <br />
-            @Html.EditorFor(p => p.Login)
-            @Html.ValidationMessageFor(p => p.Login)
+            <input type="text" class="form-control" name="Login" id="Login" autofocus required />
+            <input type="search" />
+
+            @*@Html.EditorFor(p => p.Login)*@
+            @*@Html.ValidationMessageFor(p => p.Login)*@
         </div>
-        <div>
+        <div class="mb-3, editor-field">
             @Html.LabelFor(p => p.Password)
             <br />
-            @Html.PasswordFor(p => p.Password)
-            @Html.ValidationMessageFor(p => p.Password)
+            <input type="password" class="form-control" name="Password" id="Password" required>
+            @*@Html.PasswordFor(p => p.Password)*@
+            @*@Html.ValidationMessageFor(p => p.Password)*@
         </div>
         <button type="submit" class="btn btn-primary" name="Submit">Submit</button>
     </fieldset>
