@@ -10,6 +10,8 @@ namespace TestWeb.Controllers
     {
         public ActionResult Index()
         {
+            ViewData["Test1"] = "1111";
+
             return View();
         }
 
